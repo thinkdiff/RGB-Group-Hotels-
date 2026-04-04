@@ -1,0 +1,123 @@
+import Image from "next/image";
+import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import styles from "./page.module.css";
+
+export const metadata = {
+  title: "Fine Dining | The RBGm London",
+  description:
+    "Experience Michelin-starred cuisine at The Amber Room, traditional Afternoon Tea, and 24-hour room service at The RBGm London.",
+};
+
+const diningVenues = [
+  {
+    name: "The Amber Room",
+    type: "Michelin-Starred Fine Dining",
+    desc: "Our signature restaurant presents contemporary British cuisine crafted from the finest seasonal ingredients. A symphony of extraordinary flavours in an elegant, dimly lit setting.",
+    hours: "Dinner: 6:00 PM – 10:30 PM (Tuesday – Saturday)",
+    dressCode: "Smart Elegant",
+    image: "/dining.png",
+  },
+  {
+    name: "The Drawing Room",
+    type: "Traditional Afternoon Tea",
+    desc: "Experience our legendary Afternoon Tea. Delicate finger sandwiches, warm scones with clotted cream and house-made preserves, and exquisitely crafted pastries.",
+    hours: "Daily: 12:30 PM – 5:00 PM",
+    dressCode: "Smart Casual",
+    image: "/dining.png",
+  },
+  {
+    name: "The Library Bar",
+    type: "Cocktails & Spirits",
+    desc: "A sophisticated enclave offering vintage spirits, bespoke cocktails, and an extensive collection of rare cigars in a warm, wood-panelled atmosphere.",
+    hours: "Daily: 4:00 PM – 1:00 AM",
+    dressCode: "Smart Casual",
+    image: "/dining.png",
+  },
+];
+
+const diningServices = [
+  { icon: "🚪", title: "24-Hour Room Service", desc: "Enjoy our extensive in-room dining menu at any hour, from a full English breakfast to late-night comfort food." },
+  { icon: "🥂", title: "Private Dining", desc: "Intimate private dining rooms available for family celebrations, business dinners, or romantic evenings." },
+  { icon: "🥗", title: "Dietary Requirements", desc: "Our chefs expertly cater to all dietary needs, including vegan, gluten-free, halal, and kosher requirements." },
+  { icon: "👶", title: "Children's Menus", desc: "Thoughtfully crafted, nutritious, and delicious options tailored specifically for our younger guests." },
+];
+
+export default function DiningPage() {
+  return (
+    <>
+      <Navbar />
+
+      {/* Hero */}
+      <section className={styles.pageHero} id="dining-hero">
+        <Image src="/dining.png" alt="Fine dining at The RBGm" fill quality={90} className={styles.heroImg} />
+        <div className={styles.pageHeroOverlay} />
+        <div className={styles.pageHeroContent}>
+          <span className={styles.overline}>Culinary Excellence</span>
+          <h1>A Feast for the Senses</h1>
+          <p>
+            From Michelin-starred gastronomy to our legendary Afternoon Tea, 
+            discover unparalleled dining experiences.
+          </p>
+        </div>
+      </section>
+
+      {/* Venues */}
+      <section className="section" id="venues">
+        <div className="container">
+          <div className="section-header">
+            <span className="overline">Our Restaurants</span>
+            <h2>Exceptional Venues</h2>
+          </div>
+          <div className={styles.venuesList}>
+            {diningVenues.map((venue, i) => (
+              <div key={venue.name} className={`${styles.venueRow} ${i % 2 !== 0 ? styles.venueRowReverse : ''}`}>
+                <div className={styles.venueImageWrap}>
+                  <Image src={venue.image} alt={venue.name} fill className={styles.venueImage} />
+                </div>
+                <div className={styles.venueContent}>
+                  <span className={styles.venueType}>{venue.type}</span>
+                  <h3>{venue.name}</h3>
+                  <p>{venue.desc}</p>
+                  <div className={styles.venueDetails}>
+                    <div>
+                      <strong>Hours:</strong> <span>{venue.hours}</span>
+                    </div>
+                    <div>
+                      <strong>Dress Code:</strong> <span>{venue.dressCode}</span>
+                    </div>
+                  </div>
+                  <Link href="/contact" className="btn btn-primary">Make a Reservation</Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dining Services Grid */}
+      <section className="section section-cream" id="dining-services">
+        <div className="container">
+          <div className="section-header">
+            <span className="overline">Bespoke Services</span>
+            <h2>Catered to Your Preferences</h2>
+          </div>
+          <div className="grid-2">
+            {diningServices.map(service => (
+              <div key={service.title} className={`card ${styles.dsCard}`}>
+                <span className={styles.dsIcon}>{service.icon}</span>
+                <div>
+                  <h4>{service.title}</h4>
+                  <p>{service.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
