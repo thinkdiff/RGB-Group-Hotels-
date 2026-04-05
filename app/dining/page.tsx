@@ -5,35 +5,35 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Fine Dining | The RBGm London",
+  title: "Dining | Aura River Resort",
   description:
-    "Experience Michelin-starred cuisine at The Amber Room, traditional Afternoon Tea, and 24-hour room service at The RBGm London.",
+    "Experience delightful cuisine at our beautiful river resort with lovely indoor and outdoor dining settings.",
 };
 
 const diningVenues = [
   {
     name: "The Amber Room",
-    type: "Michelin-Starred Fine Dining",
-    desc: "Our signature restaurant presents contemporary British cuisine crafted from the finest seasonal ingredients. A symphony of extraordinary flavours in an elegant, dimly lit setting.",
-    hours: "Dinner: 6:00 PM – 10:30 PM (Tuesday – Saturday)",
-    dressCode: "Smart Elegant",
-    image: "/dining.png",
+    type: "Fine Dining",
+    desc: "Our signature restaurant presents contemporary cuisine crafted from the finest seasonal ingredients. A symphony of extraordinary flavours in an elegant setting.",
+    hours: "Dinner: 6:00 PM – 10:30 PM",
+    dressCode: "Smart Casual",
+    image: "/dining.jpg",
   },
   {
     name: "The Drawing Room",
     type: "Traditional Afternoon Tea",
-    desc: "Experience our legendary Afternoon Tea. Delicate finger sandwiches, warm scones with clotted cream and house-made preserves, and exquisitely crafted pastries.",
-    hours: "Daily: 12:30 PM – 5:00 PM",
-    dressCode: "Smart Casual",
-    image: "/dining.png",
+    desc: "Experience our legendary evening snacks and tea. Enjoy the serene beauty of the resort alongside our exquisitely crafted snacks.",
+    hours: "Daily: 4:30 PM – 6:30 PM",
+    dressCode: "Casual",
+    image: "/dining.jpg",
   },
   {
     name: "The Library Bar",
     type: "Cocktails & Spirits",
-    desc: "A sophisticated enclave offering vintage spirits, bespoke cocktails, and an extensive collection of rare cigars in a warm, wood-panelled atmosphere.",
-    hours: "Daily: 4:00 PM – 1:00 AM",
+    desc: "A sophisticated enclave offering bespoke cocktails, beverages, and a relaxing atmosphere.",
+    hours: "Daily: 4:00 PM – 11:00 PM",
     dressCode: "Smart Casual",
-    image: "/dining.png",
+    image: "/dining.jpg",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function DiningPage() {
 
       {/* Hero */}
       <section className={styles.pageHero} id="dining-hero">
-        <Image src="/dining.png" alt="Fine dining at The RBGm" fill quality={90} className={styles.heroImg} />
+        <Image src="/dining.jpg" alt="Fine dining at Aura River Resort" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Culinary Excellence</span>

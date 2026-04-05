@@ -67,13 +67,13 @@ const testimonials = [
   },
   {
     quote:
-      "The children's programme was exceptional. Our kids were entertained with curated London tours while we enjoyed the spa. Truly a five-star family experience.",
+      "The nature programme was exceptional. Our kids were entertained with curated local tours while we enjoyed the spa. Truly a five-star family experience.",
     author: "The Patel Family",
     detail: "Family Holiday, March 2026",
   },
   {
     quote:
-      "Impeccable service, breathtaking room views of Parliament, and the finest afternoon tea I've had in London. Five years running as the best — well deserved.",
+      "Impeccable service, breathtaking room views of the Himalayas, and the finest evening tea I've had in Rishikesh. Five years running as the best — well deserved.",
     author: "Catherine Whitmore",
     detail: "Weekend Retreat, January 2026",
   },
@@ -90,8 +90,8 @@ export default function Home() {
       <section className={styles.hero} id="hero">
         <div className={styles.heroOverlay} />
         <Image
-          src="/hero-lobby.png"
-          alt="The RBGm London grand lobby"
+          src="/hero-lobby.jpg"
+          alt="Aura River Resort"
           fill
           priority
           quality={90}
@@ -99,16 +99,16 @@ export default function Home() {
         />
         <div className={styles.heroContent}>
           <span className={`${styles.heroBadge} animate-fade-in-up`}>
-            ★ Voted London&rsquo;s Finest — Five Years Running
+            ★ Voted Rishikesh&rsquo;s Finest Resort
           </span>
           <h1 className="animate-fade-in-up delay-1">
             Welcome to <br />
-            <em>The RBGm London</em>
+            <em>Aura River Resort</em>
           </h1>
           <p className="animate-fade-in-up delay-2">
-            A sanctuary of timeless British elegance in the heart of Mayfair.
-            Experience five-star luxury, world-class dining, and the warmest
-            hospitality that has enchanted families for generations.
+            A sanctuary of natural elegance in the heart of Shivpuri.
+            Experience luxury cottages, world-class dining, and the warmest
+            hospitality that connects you with nature.
           </p>
           <div className={`${styles.heroCtas} animate-fade-in-up delay-3`}>
             <Link href="/contact" className="btn btn-primary">
@@ -136,15 +136,15 @@ export default function Home() {
               </h2>
               <hr className="gold-divider gold-divider-left" />
               <p>
-                On behalf of our entire team here at The RBGm London, it is my
+                On behalf of our entire team here at Aura River Resort, it is my
                 personal pleasure to welcome you and your family. For over five
                 glorious years, we have had the privilege of being recognised as
-                one of London&rsquo;s finest luxury hotels — and that honour
+                one of Rishikesh&rsquo;s finest luxury resorts — and that honour
                 begins and ends with you.
               </p>
               <p>
                 Whether you are joining us for a family holiday, a special
-                celebration, or a restful retreat from public life, our
+                celebration, or a restful retreat, our
                 dedicated team is here to ensure every moment of your stay is
                 nothing short of extraordinary.
               </p>
@@ -156,16 +156,16 @@ export default function Home() {
                 <em>
                   Warmest regards,
                   <br />
-                  <strong>Alexander Montague-Reed</strong>
+                  <strong>General Manager</strong>
                   <br />
-                  General Manager, The RBGm London
+                  Aura River Resort
                 </em>
               </p>
             </div>
             <div className={styles.welcomeImage}>
               <Image
-                src="/exterior.png"
-                alt="The RBGm London exterior"
+                src="/exterior.jpg"
+                alt="Aura River Resort exterior"
                 width={560}
                 height={420}
                 quality={85}
@@ -213,8 +213,8 @@ export default function Home() {
           <div className={styles.splitSection}>
             <div className={styles.splitImage}>
               <Image
-                src="/room.png"
-                alt="Luxury suite with parliament view"
+                src="/rooms/camps.jpg"
+                alt="Luxury cottage with mountain view"
                 width={600}
                 height={450}
                 quality={85}
@@ -222,14 +222,14 @@ export default function Home() {
               />
             </div>
             <div className={styles.splitContent}>
-              <span className={styles.overline}>Rooms & Suites</span>
+              <span className={styles.overline}>Cottages & Camps</span>
               <h2>Your Private Sanctuary Awaits</h2>
               <hr className="gold-divider gold-divider-left" />
               <p>
-                Each of our 120 exquisitely appointed rooms and suites has been
-                designed to provide the ultimate in comfort and British
-                sophistication, many offering stunning views across London&rsquo;s
-                iconic skyline.
+                Each of our exquisitely appointed cottages and camps has been
+                designed to provide the ultimate in comfort and natural
+                elegance, many offering stunning views across the majestic
+                Himalayas and the River Ganges.
               </p>
               <ul className={styles.featureList}>
                 <li>Egyptian cotton linens & pillow menu</li>
@@ -258,10 +258,10 @@ export default function Home() {
               <h2>A Feast for Every Sense</h2>
               <hr className="gold-divider gold-divider-left" />
               <p>
-                Our Michelin-starred restaurant, The Amber Room, serves
-                contemporary British cuisine with seasonal ingredients sourced
-                from the finest UK farms. Enjoy our legendary afternoon tea, 24-hour
-                room service, or let us recommend the best of London&rsquo;s
+                Our signature restaurant serves
+                contemporary cuisine with seasonal ingredients sourced
+                from the finest organic farms. Enjoy our legendary buffet, 24-hour
+                room service, or let us recommend the best of Rishikesh&rsquo;s
                 culinary scene.
               </p>
               <ul className={styles.featureList}>
@@ -278,8 +278,8 @@ export default function Home() {
             </div>
             <div className={styles.splitImage}>
               <Image
-                src="/dining.png"
-                alt="The Amber Room fine dining"
+                src="/dining.jpg"
+                alt="Fine dining"
                 width={600}
                 height={450}
                 quality={85}
@@ -296,8 +296,8 @@ export default function Home() {
           <div className={styles.splitSection}>
             <div className={styles.splitImage}>
               <Image
-                src="/spa.png"
-                alt="The RBGm Spa & Wellness"
+                src="/spa.jpg"
+                alt="Resort Spa & Wellness"
                 width={600}
                 height={450}
                 quality={85}
@@ -391,8 +391,8 @@ export default function Home() {
             <h2>Bring the Whole Family</h2>
             <p>
               From children&rsquo;s activity programmes and family suites to
-              pet-friendly accommodations and babysitting services, The RBGm
-              London is designed to delight guests of every age.
+              pet-friendly accommodations and adventure activities, Aura River
+              Resort is designed to delight guests of every age.
             </p>
             <div className={styles.heroCtas}>
               <Link href="/contact" className="btn btn-primary">

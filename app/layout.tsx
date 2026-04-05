@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The RBGm London | Five-Star Luxury Hotel & Concierge",
+  title: "Aura River Resort | Luxury Cottages & Camps",
   description:
-    "Welcome to The RBGm London — voted one of the finest luxury hotels for five consecutive years. Experience unparalleled elegance, world-class dining, and bespoke concierge services in the heart of London.",
+    "Welcome to Aura River Resort — experience unparalleled natural beauty, luxury cottages, and fine dining at our beautiful resort in Rishikesh.",
   keywords:
-    "luxury hotel London, five star hotel, RBGm London, concierge services, fine dining London, spa London hotel",
+    "luxury resort Rishikesh, aura river resort, cottages, camps, shivpuri",
 };
 
 export default function RootLayout({

@@ -5,9 +5,9 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Spa & Wellness | The RBGm London",
+  title: "Spa & Wellness | Aura River Resort",
   description:
-    "Restore and rejuvenate at The Mayfair Spa. Featuring a 20-metre heated infinity pool, bespoke treatments, and a 24-hour fitness centre.",
+    "Restore and rejuvenate at The Resort Spa. Featuring bespoke treatments and holistic wellness.",
 };
 
 const treatments = [
@@ -43,14 +43,14 @@ export default function SpaPage() {
       <Navbar />
 
       <section className={styles.pageHero} id="spa-hero">
-        <Image src="/spa.png" alt="The Mayfair Spa Pool" fill quality={90} className={styles.heroImg} />
+        <Image src="/spa.jpg" alt="The Resort Spa Pool" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
-          <span className={styles.overline}>The Mayfair Spa</span>
+          <span className={styles.overline}>The Resort Spa</span>
           <h1>An Oasis of Tranquillity</h1>
           <p>
-            Immerse yourself in serenity. Our award-winning spa offers a holistic 
-            approach to wellbeing right in the centre of London.
+            Immerse yourself in serenity. Our spa offers a holistic 
+            approach to wellbeing right in the lap of nature.
           </p>
         </div>
       </section>
@@ -63,9 +63,9 @@ export default function SpaPage() {
               <h2>Wellness Redefined</h2>
               <hr className="gold-divider gold-divider-left" />
               <p>
-                Spanning over 15,000 square feet, The Mayfair Spa provides an exceptional 
+                Spanning across a tranquil valley, The Resort Spa provides an exceptional 
                 array of facilities designed to completely restore mind and body. 
-                Complimentary access is provided for all hotel guests.
+                Complimentary access is provided for all resort guests.
               </p>
               <ul className={styles.featureList}>
                 <li>20-metre heated indoor infinity pool</li>
@@ -92,7 +92,7 @@ export default function SpaPage() {
               </div>
             </div>
             <div className={styles.facilityImageWrap}>
-              <Image src="/spa.png" alt="Spa Facilities" fill className={styles.facilityImage} />
+              <Image src="/spa.jpg" alt="Spa Facilities" fill className={styles.facilityImage} />
             </div>
           </div>
         </div>

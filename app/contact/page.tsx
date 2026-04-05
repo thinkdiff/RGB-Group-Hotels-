@@ -23,7 +23,7 @@ export default function ContactPage() {
       <Navbar />
 
       <section className={styles.pageHero} id="contact-hero">
-        <Image src="/exterior.png" alt="The RBGm London Entrance" fill quality={90} className={styles.heroImg} />
+        <Image src="/exterior.jpg" alt="Aura River Resort Entrance" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Contact & Reservations</span>
@@ -50,22 +50,22 @@ export default function ContactPage() {
               <div className={styles.infoBlocks}>
                 <div className={styles.infoBlock}>
                   <h4>Address</h4>
-                  <p>The RBGm London<br />1 Mayfair Place<br />London, W1K 2AL<br />United Kingdom</p>
+                  <p>Aura River Resort<br />2.5 Ahead from Shivpuri police station<br />wine Shop kathiya village<br />Shivpuri Rishikesh - 249192</p>
                 </div>
 
                 <div className={styles.infoBlock}>
                   <h4>Reservations</h4>
-                  <p>Phone: +44 (0)20 7946 0958<br />Email: reservations@rbgm-london.com</p>
+                  <p>Phone: +91 98765 43210<br />Email: reservations@aurariverresort.co.in</p>
                 </div>
 
                 <div className={styles.infoBlock}>
                   <h4>Concierge</h4>
-                  <p>Phone: +44 (0)20 7946 0959<br />Email: concierge@rbgm-london.com</p>
+                  <p>Phone: +91 98765 43211<br />Email: concierge@aurariverresort.co.in</p>
                 </div>
 
                 <div className={styles.infoBlock}>
                   <h4>Events & Dining</h4>
-                  <p>Phone: +44 (0)20 7946 0960<br />Email: events@rbgm-london.com</p>
+                  <p>Phone: +91 98765 43212<br />Email: events@aurariverresort.co.in</p>
                 </div>
               </div>
             </div>

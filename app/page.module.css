@@ -373,7 +373,7 @@
 /* ===== FAMILY CTA ===== */
 .familyCta {
   position: relative;
-  background: url('/hero-lobby.png') center / cover no-repeat;
+  background: url('/hero-lobby.jpg') center / cover no-repeat;
   padding: 6rem 0;
 }
 

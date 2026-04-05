@@ -14,13 +14,12 @@ export default function Footer() {
                 <span className={styles.logoIcon}>✦</span>
                 <div>
                   <span className={styles.logoName}>The RBGm</span>
-                  <span className={styles.logoSub}>LONDON</span>
+                  <span className={styles.logoSub}>RISHIKESH</span>
                 </div>
               </div>
               <p className={styles.tagline}>
-                Voted one of London&rsquo;s finest luxury hotels for five
-                consecutive years. Where timeless elegance meets
-                modern sophistication.
+                Voted one of Rishikesh&rsquo;s finest luxury resorts. 
+                Where natural beauty meets modern sophistication.
               </p>
               <div className={styles.socials}>
                 {["Instagram", "Facebook", "X", "LinkedIn"].map((s) => (
@@ -52,9 +51,11 @@ export default function Footer() {
 
             <div className={styles.column}>
               <h4>Contact</h4>
-              <p>1 Mayfair Place, London W1K 2AL</p>
-              <p>+44 (0)20 7946 0958</p>
-              <p>concierge@rbgm-london.com</p>
+              <p>2.5 Ahead from Shivpuri police station</p>
+              <p>wine Shop kathiya village</p>
+              <p>Shivpuri Rishikesh - 249192</p>
+              <p>+91 98765 43210</p>
+              <p>reservations@aurariverresort.co.in</p>
               <Link href="/contact" className={`btn btn-secondary ${styles.footerCta}`}>
                 Book Your Stay
               </Link>
@@ -67,7 +68,7 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className="container">
           <div className={styles.bottomInner}>
-            <p>&copy; {new Date().getFullYear()} The RBGm London. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} The RBGm Rishikesh. All rights reserved.</p>
             <div className={styles.bottomLinks}>
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>

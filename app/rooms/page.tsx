@@ -5,63 +5,76 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Rooms & Suites | The RBGm London",
+  title: "Cottages & Camps | Aura River Resort",
   description:
-    "Discover our exquisitely appointed rooms and suites at The RBGm London — from Deluxe Rooms to the Royal Penthouse, each featuring marble bathrooms, Egyptian cotton linens, and panoramic London views.",
+    "Discover our exquisitely appointed cottages and camps at Aura River Resort — each offering a unique experience with panoramic views of the Himalayas and the Ganges.",
 };
 
 const rooms = [
   {
-    name: "Deluxe Room",
+    name: "Camps",
+    size: "20 sqm",
+    price: "From ₹3500/night",
+    features: [
+      "Mountain view",
+      "Attached washroom",
+      "Invertor backup",
+      "Tea/coffee maker",
+      "Adventure activity access",
+    ],
+    image: "/rooms/camps.jpg",
+  },
+  {
+    name: "Wall Cottage Cooler",
+    size: "30 sqm",
+    price: "From ₹4500/night",
+    features: [
+      "River view",
+      "Air cooler",
+      "Private patio",
+      "Comfortable bedding",
+      "Room service",
+    ],
+    image: "/rooms/wall-cottage.jpg",
+  },
+  {
+    name: "Premium AC Cottage",
     size: "35 sqm",
-    price: "From £450/night",
+    price: "From ₹6500/night",
     features: [
-      "King or twin beds",
-      "City garden view",
-      "Marble en-suite bathroom",
-      "In-room safe & minibar",
-      "Nespresso machine",
+      "Air conditioning",
+      "Premium furniture",
+      "Ganges view",
+      "En-suite bathroom",
+      "Mini fridge",
     ],
-    image: "/room.png",
+    image: "/rooms/premium-ac-cottage.jpg",
   },
   {
-    name: "Premier Suite",
-    size: "55 sqm",
-    price: "From £750/night",
+    name: "Premium Wooden Cottages",
+    size: "40 sqm",
+    price: "From ₹8000/night",
     features: [
-      "Separate living area",
-      "Parliament or Thames view",
-      "Walk-in rain shower & soaking tub",
-      "Butler service on request",
-      "Complimentary afternoon tea",
+      "Wooden interiors with natural aesthetics",
+      "Air conditioning",
+      "Spacious balcony overlooking the valley",
+      "Luxury toiletries",
+      "Complimentary breakfast",
     ],
-    image: "/room.png",
+    image: "/rooms/premium-wooden-cottage.jpg",
   },
   {
-    name: "Family Suite",
-    size: "70 sqm",
-    price: "From £950/night",
+    name: "Igloo Cottages",
+    size: "25 sqm",
+    price: "From ₹5500/night",
     features: [
-      "Inter-connecting rooms",
-      "Children's welcome amenities",
-      "Baby cot & high chair available",
-      "Private dining table for 6",
-      "Pet-friendly upon request",
+      "Unique igloo architecture",
+      "Air conditioning",
+      "Cosy atmosphere",
+      "Star-gazing skylight",
+      "Private seating area",
     ],
-    image: "/room.png",
-  },
-  {
-    name: "Royal Penthouse",
-    size: "150 sqm",
-    price: "From £3,500/night",
-    features: [
-      "Private terrace with panoramic views",
-      "Grand piano & fireplace",
-      "Dedicated 24-hour butler",
-      "Private dining room for 12",
-      "Chauffeur-driven Rolls-Royce",
-    ],
-    image: "/room.png",
+    image: "/rooms/igloo-cottage.jpg",
   },
 ];
 
@@ -81,14 +94,14 @@ export default function RoomsPage() {
 
       {/* Hero */}
       <section className={styles.pageHero} id="rooms-hero">
-        <Image src="/room.png" alt="Luxury suite" fill quality={85} className={styles.heroImg} />
+        <Image src="/hero-new.jpg" alt="Luxury cottage" fill quality={85} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
-          <span className={styles.overline}>Rooms & Suites</span>
+          <span className={styles.overline}>Cottages & Camps</span>
           <h1>Your Private Sanctuary</h1>
           <p>
-            120 exquisitely appointed rooms and suites, each a masterpiece
-            of British elegance with modern comforts and breathtaking London views.
+            Exquisitely appointed cottages and camps, each a masterpiece
+            of natural elegance with modern comforts and breathtaking mountain views.
           </p>
         </div>
       </section>

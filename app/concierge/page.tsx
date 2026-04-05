@@ -5,9 +5,9 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Concierge Services | The RBGm London",
+  title: "Concierge Services | Aura River Resort",
   description:
-    "Bespoke concierge services at The RBGm London. Let us arrange theatre tickets, private tours, Chauffeur services, and exclusive London experiences.",
+    "Bespoke concierge services at Aura River Resort. Let us arrange adventure tickets, private tours, Chauffeur services, and exclusive Rishikesh experiences.",
 };
 
 const conciergeServices = [
@@ -18,17 +18,17 @@ const conciergeServices = [
   },
   {
     title: "Theatre & Entertainment",
-    desc: "Unrivalled access to the West End. We secure premium seating for sold-out shows, ballet, opera, and exclusive London sporting events.",
+    desc: "Unrivalled access to local adventures. We secure premium arrangements for river rafting, bungee jumping, and exclusive Rishikesh natural treks.",
     icon: "🎫",
   },
   {
     title: "Curated Tours",
-    desc: "Discover London through our private guided tours. From historical walks and museum private viewings to helicopter flights over the Thames.",
+    desc: "Discover Rishikesh through our private guided tours. From historical temple walks and scenic views to camping alongside the Ganges.",
     icon: "🗺️",
   },
   {
     title: "Restaurant Reservations",
-    desc: "Access the inaccessible. Our Concierge maintains close relationships with London's finest dining establishments, securing priority reservations for our guests.",
+    desc: "Access the inaccessible. Our Concierge maintains close relationships with Rishikesh's finest dining establishments, securing priority reservations for our guests.",
     icon: "🍾",
   },
   {
@@ -49,14 +49,14 @@ export default function ConciergePage() {
       <Navbar />
 
       <section className={styles.pageHero} id="concierge-hero">
-        <Image src="/exterior.png" alt="Concierge arranging a car" fill quality={90} className={styles.heroImg} />
+        <Image src="/exterior.jpg" alt="Concierge arranging a car" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Les Clefs d'Or Concierge</span>
           <h1>Mastering the Impossible</h1>
           <p>
             With the golden keys lapel pinned to their uniform, our Concierge team 
-            unlocks the very best of London, crafting bespoke itineraries and unforgettable experiences.
+            unlocks the very best of Rishikesh, crafting bespoke itineraries and unforgettable experiences.
           </p>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function ConciergePage() {
           <div className="section-header">
             <span className="overline">Exclusive Access</span>
             <h2>At Your Command</h2>
-            <p>Our network of contacts across London ensures you experience the city exactly as you wish.</p>
+            <p>Our network of contacts across Rishikesh ensures you experience the region exactly as you wish.</p>
           </div>
           <div className={styles.servicesGrid}>
             {conciergeServices.map(s => (

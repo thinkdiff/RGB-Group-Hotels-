@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Guest Services | The RBGm London",
+  title: "Guest Services | Aura River Resort",
   description:
-    "Comprehensive guest services at The RBGm London — welcome messages, weather updates, dining recommendations, transportation, event planning, and more.",
+    "Comprehensive guest services at Aura River Resort — welcome messages, weather updates, dining recommendations, transportation, event planning, and more.",
 };
 
 const guestServices = [
@@ -34,7 +34,7 @@ const guestServices = [
       },
       {
         title: "Airport Transfer",
-        desc: "Private chauffeur-driven transfers from all London airports. Rolls-Royce, Mercedes S-Class, and family-sized vehicles available.",
+        desc: "Private driver transfers from all nearby airports/stations. Safaris and family-sized vehicles available.",
         icon: "✈️",
       },
     ],
@@ -44,7 +44,7 @@ const guestServices = [
     items: [
       {
         title: "Weather Update",
-        desc: "A daily weather card is placed in your room each morning alongside your newspaper, helping you plan the perfect London day.",
+        desc: "A daily weather card is placed in your room each morning, helping you plan the perfect day in Rishikesh.",
         icon: "☀️",
       },
       {
@@ -74,17 +74,17 @@ const guestServices = [
     items: [
       {
         title: "Local Dining Recommendations",
-        desc: "Our concierge curates personalised restaurant recommendations based on your preferences — from Michelin-starred French cuisine to family-friendly pubs.",
+        desc: "Our concierge curates personalised dining recommendations based on your preferences — from local organic food to family-friendly cafés.",
         icon: "🍷",
       },
       {
         title: "Local Attractions",
-        desc: "Buckingham Palace, Tower of London, the West End, and more. We arrange private tours, skip-the-line tickets, and bespoke itineraries.",
+        desc: "Triveni Ghat, Neer Garh Waterfall, and more. We arrange private tours and bespoke itineraries.",
         icon: "🏛️",
       },
       {
         title: "Transportation Options",
-        desc: "Oyster cards, private drivers, bicycle hire, or traditional black cabs — we arrange your preferred way to explore London.",
+        desc: "Safari jeeps, private drivers, or bicycle hire — we arrange your preferred way to explore Rishikesh.",
         icon: "🚕",
       },
       {
@@ -94,7 +94,7 @@ const guestServices = [
       },
       {
         title: "Emergency Contacts",
-        desc: "24-hour front desk assistance. We maintain relationships with leading London medical providers, pharmacies, and emergency services.",
+        desc: "24-hour front desk assistance. We maintain relationships with leading local medical providers, pharmacies, and emergency services.",
         icon: "🏥",
       },
     ],
@@ -184,7 +184,7 @@ export default function GuestServicesPage() {
             Our concierge team is available 24 hours a day
           </h2>
           <p style={{ margin: "1rem auto", color: "var(--light-gray)" }}>
-            Call extension 0 from your room, dial +44 (0)20 7946 0958, or
+            Call extension 0 from your room, dial +91 98765 43210, or
             simply visit our reception desk.
           </p>
         </div>
