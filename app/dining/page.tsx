@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
+import { DoorOpen, GlassWater, Salad, Baby } from "lucide-react";
 
 export const metadata = {
   title: "Dining | Aura River Resort",
@@ -38,10 +39,10 @@ const diningVenues = [
 ];
 
 const diningServices = [
-  { icon: "🚪", title: "24-Hour Room Service", desc: "Enjoy our extensive in-room dining menu at any hour, from a full English breakfast to late-night comfort food." },
-  { icon: "🥂", title: "Private Dining", desc: "Intimate private dining rooms available for family celebrations, business dinners, or romantic evenings." },
-  { icon: "🥗", title: "Dietary Requirements", desc: "Our chefs expertly cater to all dietary needs, including vegan, gluten-free, halal, and kosher requirements." },
-  { icon: "👶", title: "Children's Menus", desc: "Thoughtfully crafted, nutritious, and delicious options tailored specifically for our younger guests." },
+  { icon: <DoorOpen />, title: "24-Hour Room Service", desc: "Enjoy our extensive in-room dining menu at any hour, from a full English breakfast to late-night comfort food." },
+  { icon: <GlassWater />, title: "Private Dining", desc: "Intimate private dining rooms available for family celebrations, business dinners, or romantic evenings." },
+  { icon: <Salad />, title: "Dietary Requirements", desc: "Our chefs expertly cater to all dietary needs, including vegan, gluten-free, halal, and kosher requirements." },
+  { icon: <Baby />, title: "Children's Menus", desc: "Thoughtfully crafted, nutritious, and delicious options tailored specifically for our younger guests." },
 ];
 
 export default function DiningPage() {
@@ -51,7 +52,7 @@ export default function DiningPage() {
 
       {/* Hero */}
       <section className={styles.pageHero} id="dining-hero">
-        <Image src="/dining.jpg" alt="Fine dining at Aura River Resort" fill quality={90} className={styles.heroImg} />
+        <Image src="/dining-v2.jpg" alt="Fine dining at Aura River Resort" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Culinary Excellence</span>

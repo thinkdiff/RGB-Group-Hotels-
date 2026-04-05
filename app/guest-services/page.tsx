@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
+import { Mail, Key, Clock, Luggage, Plane, Sun, BellRing, Utensils, Shirt, Wifi, Wine, Landmark, Car, Ticket, Hospital, PartyPopper, MessageSquare, Globe, Search, Carrot } from "lucide-react";
 
 export const metadata = {
   title: "Guest Services | Aura River Resort",
@@ -15,27 +16,27 @@ const guestServices = [
       {
         title: "Welcome Message",
         desc: "Every guest receives a personalised welcome letter upon check-in, along with a complimentary glass of champagne and a curated guide to the week's events.",
-        icon: "💌",
+        icon: <Mail />,
       },
       {
         title: "Check-in Assistance",
         desc: "Our reception team guides you through a seamless check-in experience. Express check-in is available for returning guests and Prestige Club members.",
-        icon: "🔑",
+        icon: <Key />,
       },
       {
         title: "Check-out Information",
         desc: "Standard check-out is at 11:00 AM. Late check-out until 3:00 PM is complimentary for Prestige Club members. Express check-out is available via in-room television.",
-        icon: "🕐",
+        icon: <Clock />,
       },
       {
         title: "Luggage Storage",
         desc: "Complimentary luggage storage for early arrivals and late departures. Our porters will deliver luggage to your room when ready.",
-        icon: "🧳",
+        icon: <Luggage />,
       },
       {
         title: "Airport Transfer",
         desc: "Private driver transfers from all nearby airports/stations. Safaris and family-sized vehicles available.",
-        icon: "✈️",
+        icon: <Plane />,
       },
     ],
   },
@@ -45,27 +46,27 @@ const guestServices = [
       {
         title: "Weather Update",
         desc: "A daily weather card is placed in your room each morning, helping you plan the perfect day in Rishikesh.",
-        icon: "☀️",
+        icon: <Sun />,
       },
       {
         title: "Wake-up Call",
         desc: "Set wake-up calls through your in-room phone, television, or simply request via our concierge. Fresh coffee or tea delivery available.",
-        icon: "⏰",
+        icon: <BellRing />,
       },
       {
         title: "Room Service",
         desc: "24-hour room service featuring our full à la carte menu. Special dietary requirements are always accommodated with advance notice.",
-        icon: "🍽️",
+        icon: <Utensils />,
       },
       {
         title: "Laundry & Pressing",
         desc: "Same-day laundry and dry-cleaning service with collection before 10:00 AM. Express 2-hour pressing also available.",
-        icon: "👔",
+        icon: <Shirt />,
       },
       {
         title: "Wi-Fi Access",
         desc: "Complimentary high-speed Wi-Fi throughout the hotel. Our tech concierge can assist with connectivity or in-room device setup.",
-        icon: "📶",
+        icon: <Wifi />,
       },
     ],
   },
@@ -75,27 +76,27 @@ const guestServices = [
       {
         title: "Local Dining Recommendations",
         desc: "Our concierge curates personalised dining recommendations based on your preferences — from local organic food to family-friendly cafés.",
-        icon: "🍷",
+        icon: <Wine />,
       },
       {
         title: "Local Attractions",
         desc: "Triveni Ghat, Neer Garh Waterfall, and more. We arrange private tours and bespoke itineraries.",
-        icon: "🏛️",
+        icon: <Landmark />,
       },
       {
         title: "Transportation Options",
         desc: "Safari jeeps, private drivers, or bicycle hire — we arrange your preferred way to explore Rishikesh.",
-        icon: "🚕",
+        icon: <Car />,
       },
       {
         title: "Cultural Events",
         desc: "Weekly cultural calendar featuring theatre, exhibitions, concerts, and seasonal markets curated by our team.",
-        icon: "🎭",
+        icon: <Ticket />,
       },
       {
         title: "Emergency Contacts",
         desc: "24-hour front desk assistance. We maintain relationships with leading local medical providers, pharmacies, and emergency services.",
-        icon: "🏥",
+        icon: <Hospital />,
       },
     ],
   },
@@ -105,27 +106,27 @@ const guestServices = [
       {
         title: "Event Planning",
         desc: "Our events team specialises in weddings, corporate gatherings, birthday celebrations, and intimate private dinners in our exclusive venues.",
-        icon: "🎉",
+        icon: <PartyPopper />,
       },
       {
         title: "Guest Feedback",
         desc: "We welcome your feedback at any point during your stay. Speak with our Guest Relations Manager or complete our in-room feedback card.",
-        icon: "📝",
+        icon: <MessageSquare />,
       },
       {
         title: "Language Translation",
         desc: "Our multilingual team speaks 12 languages. Translation services and printed materials in your preferred language available upon request.",
-        icon: "🌍",
+        icon: <Globe />,
       },
       {
         title: "Lost & Found",
         desc: "Items can be reported at reception or by calling our dedicated lost property line. We post recovered items worldwide.",
-        icon: "🔍",
+        icon: <Search />,
       },
       {
         title: "Special Dietary Requirements",
         desc: "Vegan, vegetarian, halal, kosher, gluten-free, and allergy-specific menus available across all dining outlets with advance notice.",
-        icon: "🥗",
+        icon: <Carrot />,
       },
     ],
   },

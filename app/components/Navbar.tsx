@@ -34,7 +34,7 @@ export default function Navbar() {
           <span className={styles.logoIcon}>✦</span>
           <div className={styles.logoText}>
             <span className={styles.logoName}>The RBGm</span>
-            <span className={styles.logoSub}>LONDON</span>
+            <span className={styles.logoSub}>RISHIKESH</span>
           </div>
         </Link>
 

@@ -5,42 +5,46 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import styles from "./page.module.css";
+import {
+  Bell, Hotel, Utensils, Droplets, Compass, PartyPopper,
+  Waves, Sparkles, Dumbbell, Car, Wifi, Briefcase, Shirt, PawPrint
+} from "lucide-react";
 
 /* ---------- data ---------- */
 
 const services = [
   {
-    icon: "🛎️",
+    icon: <Bell />,
     title: "Guest Services",
     desc: "Welcome messages, weather updates, wake-up calls, check-in & check-out assistance — personalised for every guest.",
     href: "/guest-services",
   },
   {
-    icon: "🏨",
+    icon: <Hotel />,
     title: "Rooms & Suites",
     desc: "Elegant upgrades, climate control, bespoke décor, pet-friendly suites, and in-room tech concierge.",
     href: "/rooms",
   },
   {
-    icon: "🍽️",
+    icon: <Utensils />,
     title: "Fine Dining",
     desc: "Michelin-starred restaurant, 24-hour room service, late-night menus, dietary accommodations & local recommendations.",
     href: "/dining",
   },
   {
-    icon: "🧖",
+    icon: <Droplets />,
     title: "Spa & Wellness",
     desc: "Award-winning spa, heated pool, fitness centre, and personalised treatment programmes.",
     href: "/spa",
   },
   {
-    icon: "🎩",
+    icon: <Compass />,
     title: "Concierge",
     desc: "Airport transfers, restaurant reservations, event planning, theatre tickets, cultural tours and bespoke experiences.",
     href: "/concierge",
   },
   {
-    icon: "🎉",
+    icon: <PartyPopper />,
     title: "Celebrations",
     desc: "Anniversary, birthday or special-occasion planning with personalised greetings, décor, and curated menus.",
     href: "/concierge",
@@ -48,14 +52,14 @@ const services = [
 ];
 
 const amenities = [
-  { icon: "🏊", label: "Heated Pool" },
-  { icon: "💆", label: "Luxury Spa" },
-  { icon: "🏋️", label: "Fitness Centre" },
-  { icon: "🅿️", label: "Valet Parking" },
-  { icon: "📶", label: "High-Speed Wi-Fi" },
-  { icon: "👔", label: "Business Centre" },
-  { icon: "🧺", label: "Laundry & Pressing" },
-  { icon: "🐾", label: "Pet Friendly" },
+  { icon: <Waves />, label: "Heated Pool" },
+  { icon: <Sparkles />, label: "Luxury Spa" },
+  { icon: <Dumbbell />, label: "Fitness Centre" },
+  { icon: <Car />, label: "Valet Parking" },
+  { icon: <Wifi />, label: "High-Speed Wi-Fi" },
+  { icon: <Briefcase />, label: "Business Centre" },
+  { icon: <Shirt />, label: "Laundry & Pressing" },
+  { icon: <PawPrint />, label: "Pet Friendly" },
 ];
 
 const testimonials = [
@@ -90,7 +94,7 @@ export default function Home() {
       <section className={styles.hero} id="hero">
         <div className={styles.heroOverlay} />
         <Image
-          src="/hero-lobby.jpg"
+          src="/hero-lobby-v2.jpg"
           alt="Aura River Resort"
           fill
           priority
@@ -164,7 +168,7 @@ export default function Home() {
             </div>
             <div className={styles.welcomeImage}>
               <Image
-                src="/exterior.jpg"
+                src="/exterior-v2.jpg"
                 alt="Aura River Resort exterior"
                 width={560}
                 height={420}
@@ -278,7 +282,7 @@ export default function Home() {
             </div>
             <div className={styles.splitImage}>
               <Image
-                src="/dining.jpg"
+                src="/dining-v2.jpg"
                 alt="Fine dining"
                 width={600}
                 height={450}
@@ -296,7 +300,7 @@ export default function Home() {
           <div className={styles.splitSection}>
             <div className={styles.splitImage}>
               <Image
-                src="/spa.jpg"
+                src="/spa-v2.jpg"
                 alt="Resort Spa & Wellness"
                 width={600}
                 height={450}

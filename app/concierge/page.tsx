@@ -49,7 +49,7 @@ export default function ConciergePage() {
       <Navbar />
 
       <section className={styles.pageHero} id="concierge-hero">
-        <Image src="/exterior.jpg" alt="Concierge arranging a car" fill quality={90} className={styles.heroImg} />
+        <Image src="/exterior-v2.jpg" alt="Concierge arranging a car" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Les Clefs d'Or Concierge</span>

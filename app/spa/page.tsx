@@ -43,7 +43,7 @@ export default function SpaPage() {
       <Navbar />
 
       <section className={styles.pageHero} id="spa-hero">
-        <Image src="/spa.jpg" alt="The Resort Spa Pool" fill quality={90} className={styles.heroImg} />
+        <Image src="/spa-v2.jpg" alt="The Resort Spa Pool" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>The Resort Spa</span>
@@ -92,7 +92,7 @@ export default function SpaPage() {
               </div>
             </div>
             <div className={styles.facilityImageWrap}>
-              <Image src="/spa.jpg" alt="Spa Facilities" fill className={styles.facilityImage} />
+              <Image src="/spa-v2.jpg" alt="Spa Facilities" fill className={styles.facilityImage} />
             </div>
           </div>
         </div>

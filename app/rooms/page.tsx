@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
+import { Thermometer, BedDouble, Paintbrush, PawPrint, Monitor, Clock } from "lucide-react";
 
 export const metadata = {
   title: "Cottages & Camps | Aura River Resort",
@@ -79,12 +80,12 @@ const rooms = [
 ];
 
 const roomServices = [
-  { icon: "🌡️", label: "Temperature Control", desc: "Personalised room temperature adjustable at any time via in-room tablet or by calling reception." },
-  { icon: "🛏️", label: "Pillow Menu", desc: "Choose from 8 pillow types including memory foam, buckwheat, goose down, and hypoallergenic options." },
-  { icon: "🎨", label: "Room Décor Requests", desc: "Celebrate special occasions with rose petals, candles, balloons, or bespoke floral arrangements." },
-  { icon: "🐾", label: "Pet-Friendly Suites", desc: "Select suites welcome well-behaved pets with beds, bowls, treats, and a pet-sitting service available." },
-  { icon: "💻", label: "In-Room Tech", desc: "55-inch smart TV, Bluetooth speaker, USB charging, and complimentary high-speed Wi-Fi throughout." },
-  { icon: "🔒", label: "Late Check-out", desc: "Subject to availability. Guaranteed until 3:00 PM for Prestige Club members." },
+  { icon: <Thermometer />, label: "Temperature Control", desc: "Personalised room temperature adjustable at any time via in-room tablet or by calling reception." },
+  { icon: <BedDouble />, label: "Pillow Menu", desc: "Choose from 8 pillow types including memory foam, buckwheat, goose down, and hypoallergenic options." },
+  { icon: <Paintbrush />, label: "Room Décor Requests", desc: "Celebrate special occasions with rose petals, candles, balloons, or bespoke floral arrangements." },
+  { icon: <PawPrint />, label: "Pet-Friendly Suites", desc: "Select suites welcome well-behaved pets with beds, bowls, treats, and a pet-sitting service available." },
+  { icon: <Monitor />, label: "In-Room Tech", desc: "55-inch smart TV, Bluetooth speaker, USB charging, and complimentary high-speed Wi-Fi throughout." },
+  { icon: <Clock />, label: "Late Check-out", desc: "Subject to availability. Guaranteed until 3:00 PM for Prestige Club members." },
 ];
 
 export default function RoomsPage() {
@@ -94,7 +95,7 @@ export default function RoomsPage() {
 
       {/* Hero */}
       <section className={styles.pageHero} id="rooms-hero">
-        <Image src="/hero-new.jpg" alt="Luxury cottage" fill quality={85} className={styles.heroImg} />
+        <Image src="/rooms-hero-v2.jpg" alt="Luxury cottage" fill quality={85} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Cottages & Camps</span>

@@ -23,7 +23,7 @@ export default function ContactPage() {
       <Navbar />
 
       <section className={styles.pageHero} id="contact-hero">
-        <Image src="/exterior.jpg" alt="Aura River Resort Entrance" fill quality={90} className={styles.heroImg} />
+        <Image src="/exterior-v2.jpg" alt="Aura River Resort Entrance" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Contact & Reservations</span>
