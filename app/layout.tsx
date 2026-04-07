@@ -7,6 +7,9 @@ export const metadata: Metadata = {
     "Welcome to Aura River Resort — experience unparalleled natural beauty, luxury cottages, and fine dining at our beautiful resort in Rishikesh.",
   keywords:
     "luxury resort Rishikesh, aura river resort, cottages, camps, shivpuri",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
