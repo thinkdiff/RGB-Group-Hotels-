@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -5,10 +6,52 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 import { DoorOpen, GlassWater, Salad, Baby } from "lucide-react";
 
-export const metadata = {
-  title: "Dining | Aura River Resort",
+export const metadata: Metadata = {
+  title: "Dining & Restaurants | Aura River Resort, Rishikesh",
   description:
-    "Experience delightful cuisine at our beautiful river resort with lovely indoor and outdoor dining settings.",
+    "Dine at The Amber Room, The Drawing Room, and The Library Bar — three distinct venues at Aura River Resort in Shivpuri, Rishikesh. From fine dining to cocktails.",
+  alternates: { canonical: "https://rbghotels.com/dining" },
+  openGraph: {
+    title: "Dining & Restaurants | Aura River Resort, Rishikesh",
+    description:
+      "Three distinct dining venues at Aura River Resort, Shivpuri, Rishikesh — fine dining, afternoon tea, and cocktail bar.",
+    url: "https://rbghotels.com/dining",
+  },
+};
+
+const diningSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FoodEstablishment",
+      name: "The Amber Room",
+      servesCuisine: "Contemporary Indian",
+      openingHours: "Mo-Su 18:00-22:30",
+      url: "https://rbghotels.com/dining",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "2.5 km ahead of Shivpuri Police Station, Kathiya Village",
+        addressLocality: "Shivpuri, Rishikesh",
+        addressRegion: "Uttarakhand",
+        postalCode: "249192",
+        addressCountry: "IN",
+      },
+    },
+    {
+      "@type": "FoodEstablishment",
+      name: "The Drawing Room",
+      servesCuisine: "Snacks, Tea",
+      openingHours: "Mo-Su 16:30-18:30",
+      url: "https://rbghotels.com/dining",
+    },
+    {
+      "@type": "BarOrPub",
+      name: "The Library Bar",
+      servesCuisine: "Cocktails, Beverages",
+      openingHours: "Mo-Su 16:00-23:00",
+      url: "https://rbghotels.com/dining",
+    },
+  ],
 };
 
 const diningVenues = [
@@ -48,17 +91,21 @@ const diningServices = [
 export default function DiningPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(diningSchema) }}
+      />
       <Navbar />
 
       {/* Hero */}
       <section className={styles.pageHero} id="dining-hero">
-        <Image src="/dining-hero.png" alt="Fine dining at Aura River Resort" fill quality={90} className={styles.heroImg} />
+        <Image src="/dining-hero.png" alt="Fine dining at Aura River Resort, Rishikesh" fill priority quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Culinary Excellence</span>
           <h1>A Feast for the Senses</h1>
           <p>
-            From Michelin-starred gastronomy to our legendary Afternoon Tea, 
+            From award-winning riverside gastronomy to our legendary Afternoon Tea,
             discover unparalleled dining experiences.
           </p>
         </div>

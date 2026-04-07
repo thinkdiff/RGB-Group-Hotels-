@@ -28,7 +28,7 @@ const services = [
   {
     icon: <Utensils />,
     title: "Fine Dining",
-    desc: "Michelin-starred restaurant, 24-hour room service, late-night menus, dietary accommodations & local recommendations.",
+    desc: "Award-winning riverside restaurant, 24-hour room service, late-night menus, dietary accommodations & local recommendations.",
     href: "/dining",
   },
   {
@@ -65,8 +65,8 @@ const amenities = [
 const testimonials = [
   {
     quote:
-      "From the moment our family arrived, we felt like royalty. The concierge arranged a private Thames cruise for our anniversary — utterly unforgettable.",
-    author: "Victoria & James Harrington",
+      "From the moment we arrived, we felt like royalty. The concierge arranged a private Ganga rafting experience for our anniversary — utterly unforgettable.",
+    author: "Priya & Arjun Mehta",
     detail: "Family Stay, December 2025",
   },
   {

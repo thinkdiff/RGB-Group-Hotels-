@@ -5,9 +5,16 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Concierge Services | Aura River Resort",
+  title: "Concierge Services | Aura River Resort, Rishikesh",
   description:
-    "Bespoke concierge services at Aura River Resort. Let us arrange adventure tickets, private tours, Chauffeur services, and exclusive Rishikesh experiences.",
+    "Bespoke concierge services at Aura River Resort, Rishikesh. Adventure tickets, private tours, chauffeur services, and exclusive Rishikesh experiences.",
+  alternates: { canonical: "https://rbghotels.com/concierge" },
+  openGraph: {
+    title: "Concierge Services | Aura River Resort, Rishikesh",
+    description:
+      "Bespoke concierge services at Aura River Resort, Rishikesh — adventure tickets, private tours, and exclusive experiences.",
+    url: "https://rbghotels.com/concierge",
+  },
 };
 
 const conciergeServices = [

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -5,10 +6,58 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 import { Thermometer, BedDouble, Paintbrush, PawPrint, Monitor, Clock } from "lucide-react";
 
-export const metadata = {
-  title: "Cottages & Camps | Aura River Resort",
+export const metadata: Metadata = {
+  title: "Rooms, Cottages & Camps in Rishikesh | Aura River Resort",
   description:
-    "Discover our exquisitely appointed cottages and camps at Aura River Resort — each offering a unique experience with panoramic views of the Himalayas and the Ganges.",
+    "Choose from camps, wall cottages, premium AC cottages, wooden cottages, and igloo cottages at Aura River Resort in Shivpuri, Rishikesh. Prices from ₹3500/night.",
+  alternates: { canonical: "https://rbghotels.com/rooms" },
+  openGraph: {
+    title: "Rooms, Cottages & Camps in Rishikesh | Aura River Resort",
+    description:
+      "Choose from camps, wall cottages, premium AC cottages, wooden cottages, and igloo cottages at Aura River Resort in Shivpuri, Rishikesh.",
+    url: "https://rbghotels.com/rooms",
+  },
+};
+
+const roomsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HotelRoom",
+      name: "Camps",
+      description: "Riverside camps with mountain view, attached washroom, invertor backup, and adventure activity access.",
+      url: "https://rbghotels.com/rooms#room-camps",
+      offers: { "@type": "Offer", price: "3500", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", unitText: "night" } },
+    },
+    {
+      "@type": "HotelRoom",
+      name: "Wall Cottage Cooler",
+      description: "River-view cottage with air cooler, private patio, comfortable bedding, and room service.",
+      url: "https://rbghotels.com/rooms#room-wall-cottage-cooler",
+      offers: { "@type": "Offer", price: "4500", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", unitText: "night" } },
+    },
+    {
+      "@type": "HotelRoom",
+      name: "Premium AC Cottage",
+      description: "Air-conditioned cottage with Ganges view, premium furniture, en-suite bathroom, and mini fridge.",
+      url: "https://rbghotels.com/rooms#room-premium-ac-cottage",
+      offers: { "@type": "Offer", price: "6500", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", unitText: "night" } },
+    },
+    {
+      "@type": "HotelRoom",
+      name: "Premium Wooden Cottages",
+      description: "Spacious wooden cottages with natural interiors, air conditioning, valley balcony, luxury toiletries, and complimentary breakfast.",
+      url: "https://rbghotels.com/rooms#room-premium-wooden-cottages",
+      offers: { "@type": "Offer", price: "8000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", unitText: "night" } },
+    },
+    {
+      "@type": "HotelRoom",
+      name: "Igloo Cottages",
+      description: "Unique igloo-architecture cottages with air conditioning, star-gazing skylight, and private seating area.",
+      url: "https://rbghotels.com/rooms#room-igloo-cottages",
+      offers: { "@type": "Offer", price: "5500", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", unitText: "night" } },
+    },
+  ],
 };
 
 const rooms = [
@@ -91,11 +140,15 @@ const roomServices = [
 export default function RoomsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(roomsSchema) }}
+      />
       <Navbar />
 
       {/* Hero */}
       <section className={styles.pageHero} id="rooms-hero">
-        <Image src="/rooms-hero-v2.jpg" alt="Luxury cottage" fill quality={85} className={styles.heroImg} />
+        <Image src="/rooms-hero-v2.jpg" alt="Luxury cottage at Aura River Resort, Rishikesh" fill priority quality={85} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Cottages & Camps</span>
@@ -119,7 +172,7 @@ export default function RoomsPage() {
             {rooms.map((r) => (
               <div key={r.name} className={styles.roomCard} id={`room-${r.name.toLowerCase().replace(/\s+/g, "-")}`}>
                 <div className={styles.roomImageWrap}>
-                  <Image src={r.image} alt={r.name} width={600} height={400} quality={80} className={styles.roomImage} />
+                  <Image src={r.image} alt={r.name} width={600} height={400} quality={80} sizes="(max-width: 768px) 100vw, 50vw" className={styles.roomImage} />
                   <span className={styles.roomPrice}>{r.price}</span>
                 </div>
                 <div className={styles.roomInfo}>

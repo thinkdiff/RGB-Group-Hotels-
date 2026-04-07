@@ -4,9 +4,16 @@ import styles from "./page.module.css";
 import { Mail, Key, Clock, Luggage, Plane, Sun, BellRing, Utensils, Shirt, Wifi, Wine, Landmark, Car, Ticket, Hospital, PartyPopper, MessageSquare, Globe, Search, Carrot } from "lucide-react";
 
 export const metadata = {
-  title: "Guest Services | Aura River Resort",
+  title: "Guest Services | Aura River Resort, Rishikesh",
   description:
-    "Comprehensive guest services at Aura River Resort — welcome messages, weather updates, dining recommendations, transportation, event planning, and more.",
+    "Comprehensive guest services at Aura River Resort, Rishikesh — welcome messages, weather updates, dining recommendations, transportation, event planning, and more.",
+  alternates: { canonical: "https://rbghotels.com/guest-services" },
+  openGraph: {
+    title: "Guest Services | Aura River Resort, Rishikesh",
+    description:
+      "Full-service guest amenities at Aura River Resort, Rishikesh — from arrival to departure and everything in between.",
+    url: "https://rbghotels.com/guest-services",
+  },
 };
 
 const guestServices = [

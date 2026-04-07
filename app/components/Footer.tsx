@@ -23,9 +23,9 @@ export default function Footer() {
               </p>
               <div className={styles.socials}>
                 {["Instagram", "Facebook", "X", "LinkedIn"].map((s) => (
-                  <a key={s} href="#" className={styles.socialLink} aria-label={s}>
+                  <span key={s} className={styles.socialLink} aria-label={s}>
                     {s[0]}
-                  </a>
+                  </span>
                 ))}
               </div>
             </div>
@@ -42,11 +42,11 @@ export default function Footer() {
 
             <div className={styles.column}>
               <h4>Services</h4>
-              <a href="#">Airport Transfers</a>
-              <a href="#">Event Planning</a>
-              <a href="#">Business Centre</a>
-              <a href="#">Pet-Friendly Stays</a>
-              <a href="#">Loyalty Programme</a>
+              <Link href="/concierge">Airport Transfers</Link>
+              <Link href="/concierge">Event Planning</Link>
+              <Link href="/guest-services">Business Centre</Link>
+              <Link href="/rooms">Pet-Friendly Stays</Link>
+              <Link href="/contact">Loyalty Programme</Link>
             </div>
 
             <div className={styles.column}>
@@ -69,11 +69,7 @@ export default function Footer() {
         <div className="container">
           <div className={styles.bottomInner}>
             <p>&copy; {new Date().getFullYear()} The RBGm Rishikesh. All rights reserved.</p>
-            <div className={styles.bottomLinks}>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Accessibility</a>
-            </div>
+            <div className={styles.bottomLinks}></div>
           </div>
         </div>
       </div>

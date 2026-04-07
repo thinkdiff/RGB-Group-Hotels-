@@ -1,38 +1,42 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Spa & Wellness | Aura River Resort",
+export const metadata: Metadata = {
+  title: "Spa & Wellness | Aura River Resort, Rishikesh",
   description:
-    "Restore and rejuvenate at The Resort Spa. Featuring bespoke treatments and holistic wellness.",
+    "Restore and rejuvenate at The Resort Spa at Aura River Resort, Shivpuri, Rishikesh. Holistic treatments, heated pool, sauna, and fitness centre.",
+  alternates: { canonical: "https://rbghotels.com/spa" },
+  openGraph: {
+    title: "Spa & Wellness | Aura River Resort, Rishikesh",
+    description:
+      "Holistic spa treatments, heated infinity pool, sauna, and fitness centre at Aura River Resort, Shivpuri, Rishikesh.",
+    url: "https://rbghotels.com/spa",
+  },
 };
 
 const treatments = [
   {
     name: "Signature Golden Radiance Facial",
     duration: "90 Minutes",
-    price: "£220",
     desc: "A luxurious anti-aging treatment using 24k gold leaf and botanicals to restore youth and luminosity to the skin.",
   },
   {
     name: "Deep Tissue Muscle Recovery",
     duration: "60 / 90 Minutes",
-    price: "£150 / £200",
     desc: "Targeted deep pressure massage to relieve severe tension and heal stressed muscles. Ideal for post-travel recovery.",
   },
   {
     name: "Couples Retreat Package",
     duration: "120 Minutes",
-    price: "£450 (for two)",
-    desc: "A romantic escape featuring a synchronized massage, private steam shower access, and complimentary champagne and truffles.",
+    desc: "A romantic escape featuring a synchronized massage, private steam shower access, and complimentary herbal infusions.",
   },
   {
     name: "Pre-Natal Nurture Therapy",
     duration: "60 Minutes",
-    price: "£140",
     desc: "A comforting and highly restorative treatment designed specifically for expectant mothers to alleviate fatigue and promote calm.",
   },
 ];
@@ -43,7 +47,7 @@ export default function SpaPage() {
       <Navbar />
 
       <section className={styles.pageHero} id="spa-hero">
-        <Image src="/spa-v2.jpg" alt="The Resort Spa Pool" fill quality={90} className={styles.heroImg} />
+        <Image src="/spa-v2.jpg" alt="The Resort Spa at Aura River Resort, Rishikesh" fill priority quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>The Resort Spa</span>
@@ -110,7 +114,6 @@ export default function SpaPage() {
               <div key={t.name} className={styles.treatmentCard}>
                 <div className={styles.treatmentHeader}>
                   <h3>{t.name}</h3>
-                  <span className={styles.treatmentPrice}>{t.price}</span>
                 </div>
                 <span className={styles.treatmentDuration}>{t.duration}</span>
                 <p>{t.desc}</p>
