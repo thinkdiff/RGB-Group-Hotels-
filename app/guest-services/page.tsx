@@ -185,7 +185,7 @@ export default function GuestServicesPage() {
             Our concierge team is available 24 hours a day
           </h2>
           <p style={{ margin: "1rem auto", color: "var(--light-gray)" }}>
-            Call extension 0 from your room, dial +91 98765 43210, or
+            Call extension 0 from your room, dial +91-9457141414, or
             simply visit our reception desk.
           </p>
         </div>

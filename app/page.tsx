@@ -217,11 +217,11 @@ export default function Home() {
           <div className={styles.splitSection}>
             <div className={styles.splitImage}>
               <Image
-                src="/rooms/camps.jpg"
-                alt="Luxury cottage with mountain view"
-                width={600}
-                height={450}
-                quality={85}
+                src="/rooms/cottage-luxury.png"
+                alt="Luxury cottage interior with Himalayan mountain and Ganges river view"
+                width={800}
+                height={600}
+                quality={90}
                 className={styles.splitImg}
               />
             </div>

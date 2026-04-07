@@ -214,12 +214,23 @@
   align-items: center;
 }
 
-.splitImg {
+.splitImage {
+  position: relative;
+  overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
+  isolation: isolate;
+}
+
+.splitImg {
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.splitImage:hover .splitImg {
+  transform: scale(1.08);
 }
 
 .splitContent {

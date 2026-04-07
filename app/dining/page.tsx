@@ -18,7 +18,7 @@ const diningVenues = [
     desc: "Our signature restaurant presents contemporary cuisine crafted from the finest seasonal ingredients. A symphony of extraordinary flavours in an elegant setting.",
     hours: "Dinner: 6:00 PM – 10:30 PM",
     dressCode: "Smart Casual",
-    image: "/dining.jpg",
+    image: "/amber-room.png",
   },
   {
     name: "The Drawing Room",
@@ -26,7 +26,7 @@ const diningVenues = [
     desc: "Experience our legendary evening snacks and tea. Enjoy the serene beauty of the resort alongside our exquisitely crafted snacks.",
     hours: "Daily: 4:30 PM – 6:30 PM",
     dressCode: "Casual",
-    image: "/dining.jpg",
+    image: "/drawing-room.png",
   },
   {
     name: "The Library Bar",
@@ -34,7 +34,7 @@ const diningVenues = [
     desc: "A sophisticated enclave offering bespoke cocktails, beverages, and a relaxing atmosphere.",
     hours: "Daily: 4:00 PM – 11:00 PM",
     dressCode: "Smart Casual",
-    image: "/dining.jpg",
+    image: "/library-bar.png",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function DiningPage() {
 
       {/* Hero */}
       <section className={styles.pageHero} id="dining-hero">
-        <Image src="/dining-v2.jpg" alt="Fine dining at Aura River Resort" fill quality={90} className={styles.heroImg} />
+        <Image src="/dining-hero.png" alt="Fine dining at Aura River Resort" fill quality={90} className={styles.heroImg} />
         <div className={styles.pageHeroOverlay} />
         <div className={styles.pageHeroContent}>
           <span className={styles.overline}>Culinary Excellence</span>

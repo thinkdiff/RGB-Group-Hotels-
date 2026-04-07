@@ -54,8 +54,8 @@ export default function Footer() {
               <p>2.5 Ahead from Shivpuri police station</p>
               <p>wine Shop kathiya village</p>
               <p>Shivpuri Rishikesh - 249192</p>
-              <p>+91 98765 43210</p>
-              <p>reservations@aurariverresort.co.in</p>
+              <p>+91-9457141414</p>
+              <p>shivam@rbghotels.com</p>
               <Link href="/contact" className={`btn btn-secondary ${styles.footerCta}`}>
                 Book Your Stay
               </Link>

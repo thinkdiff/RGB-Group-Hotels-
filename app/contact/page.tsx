@@ -7,15 +7,37 @@ import styles from "./page.module.css";
 import { useState } from "react";
 
 export default function ContactPage() {
-  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // IMPORTANT: Replace this with your Google Apps Script Web App URL
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwhWmWYJLeSvTmBF5cx5G4ijxX8HCEMvNnuAfMyTfpQAz2wGZFlZ7A0pQuvNJ2V7Acm/exec";
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus("submitting");
-    // Simulate form submission
-    setTimeout(() => {
+    setErrorMessage("");
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        mode: "no-cors", // Required for Google Apps Script
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      // With no-cors, we can't see the response body, but we assume success if no error is thrown
       setFormStatus("success");
-    }, 1500);
+    } catch (error) {
+      console.error("Submission error:", error);
+      setFormStatus("error");
+      setErrorMessage("Something went wrong. Please try again or contact us directly.");
+    }
   };
 
   return (
@@ -55,17 +77,17 @@ export default function ContactPage() {
 
                 <div className={styles.infoBlock}>
                   <h4>Reservations</h4>
-                  <p>Phone: +91 98765 43210<br />Email: reservations@aurariverresort.co.in</p>
+                  <p>Phone: +91-9457141414<br />Email: shivam@rbghotels.com</p>
                 </div>
 
                 <div className={styles.infoBlock}>
                   <h4>Concierge</h4>
-                  <p>Phone: +91 98765 43211<br />Email: concierge@aurariverresort.co.in</p>
+                  <p>Phone: +91-9760141414<br />Email: shivam@rbghotels.com</p>
                 </div>
 
                 <div className={styles.infoBlock}>
                   <h4>Events & Dining</h4>
-                  <p>Phone: +91 98765 43212<br />Email: events@aurariverresort.co.in</p>
+                  <p>Phone: +91-7078141414<br />Email: shivam@rbghotels.com</p>
                 </div>
               </div>
             </div>
@@ -87,31 +109,36 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form className={styles.contactForm} onSubmit={handleSubmit}>
+                    {formStatus === "error" && (
+                      <div className={styles.errorMessage} style={{ color: "red", marginBottom: "1rem" }}>
+                        {errorMessage}
+                      </div>
+                    )}
                     <div className={styles.formRow}>
                       <div className={styles.formGroup}>
                         <label htmlFor="firstName">First Name *</label>
-                        <input type="text" id="firstName" required />
+                        <input type="text" id="firstName" name="firstName" required />
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="lastName">Last Name *</label>
-                        <input type="text" id="lastName" required />
+                        <input type="text" id="lastName" name="lastName" required />
                       </div>
                     </div>
 
                     <div className={styles.formRow}>
                       <div className={styles.formGroup}>
                         <label htmlFor="email">Email Address *</label>
-                        <input type="email" id="email" required />
+                        <input type="email" id="email" name="email" required />
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="phone">Phone Number</label>
-                        <input type="tel" id="phone" />
+                        <input type="tel" id="phone" name="phone" />
                       </div>
                     </div>
 
                     <div className={styles.formGroup}>
                       <label htmlFor="subject">Subject / Enquiry Type *</label>
-                      <select id="subject" required>
+                      <select id="subject" name="subject" required>
                         <option value="">Please select...</option>
                         <option value="reservation">Room Reservation</option>
                         <option value="dining">Dining Reservation</option>
@@ -123,7 +150,7 @@ export default function ContactPage() {
 
                     <div className={styles.formGroup}>
                       <label htmlFor="message">Message *</label>
-                      <textarea id="message" rows={5} required></textarea>
+                      <textarea id="message" name="message" rows={5} required></textarea>
                     </div>
 
                     <button 
